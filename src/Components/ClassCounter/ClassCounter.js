@@ -77,7 +77,6 @@ export class ClassCounter extends Component {
             })
         })
         .catch(err => console.log('Error', err))
-        console.log('u hit me')
     }
 
     addNums = (num1, num2) => {

@@ -2,7 +2,6 @@ import React from "react";
 import { shallow, mount, render } from "enzyme";
 import toJSON from "enzyme-to-json";
 import ClassCounter from "../Components/ClassCounter/ClassCounter";
-import {getPlaceholderData} from '../helperFunctions'
 
 const setUp = () => {
   const wrapper = shallow(<ClassCounter />);
@@ -112,16 +111,16 @@ describe("<ClassCounter />", () => {
     ]);
   });
 
-  it("Gets correct information from NFL API", () => {
-    let wrapper = mount(<ClassCounter />);
-    wrapper.instance().getCurrentFootballSeason = jest.fn();
-    wrapper.instance().getCurrentFootballSeason();
-    expect(wrapper.instance().getCurrentFootballSeason).toBeCalled();
-    expect(wrapper.state().footBallSeason).toEqual(2019)
-    // expect(wrapper.state().count).toEqual(0)
-    // console.log(wrapper.state());
-    // console.log(wrapper.props());
-  });
+  // it("Gets correct information from NFL API", () => {
+  //   let wrapper = mount(<ClassCounter />);
+  //   wrapper.instance().getCurrentFootballSeason = jest.fn();
+  //   wrapper.instance().getCurrentFootballSeason();
+  //   expect(wrapper.instance().getCurrentFootballSeason).toBeCalled();
+  //   expect(wrapper.state().footBallSeason).toEqual(2019)
+  //   expect(wrapper.state().count).toEqual(0)
+  //   console.log(wrapper.state());
+  //   console.log(wrapper.props());
+  // });
 
   it('Adds 2+2 and returns 4', () => {
     let wrapper = mount(<ClassCounter />)

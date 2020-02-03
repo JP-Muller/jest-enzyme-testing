@@ -18,12 +18,12 @@ function DataDash() {
   if (data && data.length > 1) {
     return (
       <div className="data-dash-wrapper">
-        {data.map(post => {
-          return <ListItem post={post} />;
+        {data.map((post, i) => {
+          return <ListItem post={post} key={i} />;
         })}
       </div>
     );
-  } else return null;
+  } else return <p>nothing to show</p>;
 }
 
 export default DataDash;

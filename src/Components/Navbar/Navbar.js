@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <header id='navbar-master'>
         <section id='navbar-header'>
-          <h1>Testing Playground</h1>
+          <h1>TESTING PLAYGROUND</h1>
         </section>
         <section id='nav-list'>
             <ul>
