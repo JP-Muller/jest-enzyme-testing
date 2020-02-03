@@ -10,6 +10,7 @@ export class ClassCounter extends Component {
         this.state = {
             count: null,
             colorData: [],
+            name: '',
             footBallSeason: null
         }
     }
@@ -19,6 +20,7 @@ export class ClassCounter extends Component {
         // this.getCurrentFootballSeason()
         getPlaceholderData()
         this.getData()
+        this.setName('Jake', 'Muller')
     }
 
     // componentDidUpdate = (prevState) => {
@@ -30,8 +32,10 @@ export class ClassCounter extends Component {
         console.log('The component was mounted!')
     }
 
-    displayName = (first, last) => {
-        return console.log(`${first} ${last}`)
+    setName = (first, last) => {
+        this.setState({
+            name: `${first} ${last}`
+        })
     }
 
     getData = () => {

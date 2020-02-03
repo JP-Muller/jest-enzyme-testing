@@ -16,5 +16,4 @@ describe('Helper Functions', () => {
             expect(data[0].title).toBe('delectus aut autem')
         })
     })
-    
 })
