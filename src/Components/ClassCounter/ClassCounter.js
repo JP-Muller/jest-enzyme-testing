@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {getPlaceholderData} from '../../helperFunctions'
 import '../../Counters.css'
 
 
@@ -15,7 +16,8 @@ export class ClassCounter extends Component {
 
     componentDidMount = () => {
         this.setCount()
-        this.getCurrentFootballSeason()
+        // this.getCurrentFootballSeason()
+        getPlaceholderData()
         this.getData()
     }
 

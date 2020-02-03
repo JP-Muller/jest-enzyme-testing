@@ -2,6 +2,7 @@ import React from "react";
 import { shallow, mount, render } from "enzyme";
 import toJSON from "enzyme-to-json";
 import ClassCounter from "../Components/ClassCounter/ClassCounter";
+import {getPlaceholderData} from '../helperFunctions'
 
 const setUp = () => {
   const wrapper = shallow(<ClassCounter />);
