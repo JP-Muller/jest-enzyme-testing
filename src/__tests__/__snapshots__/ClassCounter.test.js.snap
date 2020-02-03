@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClassCounter /> Should render without error 1`] = `
+<div
+  className="counter-wrapper"
+>
+  <h3>
+    Class Counter
+  </h3>
+  <div
+    className="current-count"
+  >
+    <h1>
+      0
+    </h1>
+  </div>
+  <div
+    className="button-container"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="far fa-minus-square"
+      />
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="far fa-plus-square"
+      />
+    </button>
+  </div>
+</div>
+`;

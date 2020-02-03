@@ -1,0 +1,48 @@
+#navbar-master {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    /* border-bottom: 4px solid orange; */
+    box-shadow: 0 5px 20px -10px #000;  
+    background-color: white;
+    color: rgb(48, 129, 194);
+}
+
+#navbar-header {
+    margin-left: 10px;
+}
+
+#nav-list{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#nav-list ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav-list li {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#nav-list li i{
+    margin-right: 10px;
+}
+
+#nav-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#nav-list li:hover{
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    cursor: pointer;
+}
