@@ -31,11 +31,4 @@ describe("MyComponent", () => {
       wrapper.find('button').simulate('click');
       expect(wrapper.find('p').text()).toEqual('Count: 4');
     });
-
-  // it("correctly increments the count by 1", () => {
-  //   expect(onCountChange).toBeCalledTimes(1);
-  //   wrapper.find("button").simulate("click");
-  //   expect(onCountChange).toBeCalledTimes(2);
-  //   console.log("SUCCESS");
-  // });
 });
