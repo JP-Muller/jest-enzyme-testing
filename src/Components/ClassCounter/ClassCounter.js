@@ -69,12 +69,10 @@ export class ClassCounter extends Component {
         })
     }
 
-    async getCurrentFootballSeason() {
-        await axios.get('https://api.sportsdata.io/v3/nfl/scores/json/CurrentSeason?key=e51c3989c4c643ef85084f27c7e1d466')
+    getCurrentFootballSeason = () => {
+        return axios.get('https://api.sportsdata.io/v3/nfl/scores/json/CurrentSeason?key=e51c3989c4c643ef85084f27c7e1d466')
         .then(res => {
-            this.setState({
-                footBallSeason: res.data
-            })
+            return res.data
         })
         .catch(err => console.log('Error', err))
     }

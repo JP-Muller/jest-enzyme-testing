@@ -68,7 +68,6 @@ describe("<ClassCounter />", () => {
     let wrapper = shallow(<ClassCounter />);
     wrapper.instance().displayName = jest.fn();
     wrapper.instance().displayName("Jake", "Muller");
-    console.log(wrapper.instance().displayName("Jake", "Muller"));
     expect(wrapper.instance().displayName).toBeCalledWith("Jake", "Muller");
     expect(wrapper.instance().displayName).toHaveReturnedWith(
       console.log("Jake Muller")
@@ -114,12 +113,11 @@ describe("<ClassCounter />", () => {
   // it("Gets correct information from NFL API", () => {
   //   let wrapper = mount(<ClassCounter />);
   //   wrapper.instance().getCurrentFootballSeason = jest.fn();
-  //   wrapper.instance().getCurrentFootballSeason();
+  //   // wrapper.instance().getCurrentFootballSeason();
+  //   wrapper.instance().getCurrentFootballSeason().then(data => {
+  //     expect(data).toBe(2019)
+  //   })
   //   expect(wrapper.instance().getCurrentFootballSeason).toBeCalled();
-  //   expect(wrapper.state().footBallSeason).toEqual(2019)
-  //   expect(wrapper.state().count).toEqual(0)
-  //   console.log(wrapper.state());
-  //   console.log(wrapper.props());
   // });
 
   it('Adds 2+2 and returns 4', () => {
