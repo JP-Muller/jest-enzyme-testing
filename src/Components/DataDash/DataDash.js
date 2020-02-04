@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./DataDash.css";
+import { CircleLoader } from "react-spinners";
 import ListItem from "../ListItem/ListItem";
 import { getPlaceholderData } from "../../helperFunctions";
 
@@ -16,14 +16,14 @@ class DataDash extends Component {
     this.setState({ data });
   };
 
-  async componentDidMount () {
+  async componentDidMount() {
     await getPlaceholderData().then(extractedData => {
       this.setData(extractedData);
     });
-  };
+  }
 
   render() {
-    const {data} = this.state
+    const { data } = this.state;
 
     if (data && data.length > 1) {
       return (
@@ -33,7 +33,12 @@ class DataDash extends Component {
           })}
         </div>
       );
-    } else return <h2>NOTHING TO SHOW</h2>;
+    } else
+      return (
+        <div id='loading-container' style={{ marginTop: "75px" }}>
+          <CircleLoader size={200} color={"lightblue"} />
+        </div>
+      );
   }
 }
 
