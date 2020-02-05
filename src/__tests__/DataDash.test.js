@@ -17,7 +17,6 @@ describe("<DataDash />", () => {
     var wrapper = mount(<DataDash />);
     const instance = wrapper.instance();
     await instance.componentDidMount();
-    wrapper.instance().forceUpdate();
     console.log(wrapper.state().data[0]);
     wrapper.update();
     expect(wrapper.find(ListItem).exists()).toBeTruthy();

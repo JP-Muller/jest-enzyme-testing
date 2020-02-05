@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react'
 import '../../Counters.css'
 
-
-
 function HooksCounter() {
     const [count, setCount] = React.useState(null)
 

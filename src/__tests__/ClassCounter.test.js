@@ -56,10 +56,12 @@ describe("<ClassCounter />", () => {
   it("Decrements count amount correctly", () => {
     const wrapper = mount(<ClassCounter />);
     //Here we simulate 3 clicks to the decrement count button and check that the correct number is rendered and the correct state is set
+    // wrapper.instance().decrementCount = jest.fn();
     wrapper.find(".fa-minus-square").simulate("click");
     wrapper.find(".fa-minus-square").simulate("click");
     wrapper.find(".fa-minus-square").simulate("click");
     expect(wrapper.find("h1").text()).toEqual("-3");
+    // expect(wrapper.instance().decrementCount).toHaveBeenCalled()
     expect(wrapper.state().count).toEqual(-3)
   });
 
